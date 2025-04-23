@@ -32,7 +32,7 @@ public class MemberService {
         memberRepository.findByName(member.getName())
             //같은 이름이 있는 중복회원 x
             .ifPresent(m->{
-                throw new IllegalStateException("이미 존재하는 회원입니다");
+                throw new IllegalStateException("이미 존재하는 회원입니다.");
             });
     }
     //전체회원 조회
